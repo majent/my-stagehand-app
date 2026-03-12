@@ -1,0 +1,19 @@
+{
+  "name": "my-stagehand-app",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx agent/act.ts",
+    "cdp": "sh -c '/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-cdp-profile & tsx cdp.ts'"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "latest",
+    "chrome-remote-interface": "^0.34.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/chrome-remote-interface": "^0.33.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}
